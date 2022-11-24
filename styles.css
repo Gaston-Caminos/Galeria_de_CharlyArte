@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color_1: #FAFAD2; /*LightGoldenrodYellow*/
+    --color_2: #FFFAF0; /*Floral white*/
+    --color_3: #4B0082; /*Indigo*/
+    --color_4: #F5DEB3; /*Wheat*/
+    --color_5: #C0C0C0; /*Silver*/
+}
+
+body { 
+    align-items: center;
+}
+.enlace { 
+    color: var(--color_2);
+    text-decoration: none;
+}
+/**************************************************/
+
+main {
+    background: linear-gradient(#000 1%, var(--color_4), var(--color_5))
+}
+
+.cabecera {
+    width: 100%;
+    height: 5vh;
+    /*position: fixed;*/
+    background-color: var(--color_1);
+}
+
+.menu__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+    list-style-type: none;
+}
+
+.menu__item {
+    text-decoration: none;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}
+
+.menu__item:active { /* Cuando clickeo el item del menú, se pone en "negrita"*/
+    font-weight: 600;
+}
+
+/************************************************** CSS Galería **************************************************/
+.galeria {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 45% 45%; 
+    grid-template-rows: 30% 30%;
+    height: calc(110vh - 50px);
+    gap: 1rem; /* Espacio entre cada columna/fila */
+    padding: 2rem 1rem 0 1rem;
+}
+
+.obra:nth-child(1) {
+    background: url("imagenes/mirada_intergalactica.jpg") center / cover no-repeat; /*centro la imagen, cubro toda el área, y si la pantalla se agranda, la imagen no se repite */;
+    grid-column: 1 / 1; /* column start / end */
+    grid-row: 1 / 1; /* row start / end */
+}
+
+.obra:nth-child(2) {
+    background: url("imagenes/big_bang.jpg") center / cover no-repeat; /*centro la imagen, cubro toda el área, y si la pantalla se agranda, la imagen no se repite */;
+    grid-column: 2 / 2; /* column start / end */
+    grid-row: 1 / 1; /* row start / end */
+}
+
+.obra:nth-child(3) {
+    background: url("imagenes/respiro.jpg") center / cover no-repeat; /*centro la imagen, cubro toda el área, y si la pantalla se agranda, la imagen no se repite */;
+    grid-column: 1 / 1; /* column start / end */
+    grid-row: 2 / 2; /* row start / end */
+}
+
+.obra:nth-child(4) {
+    background: url("imagenes/volviendo_a_casa.jpg") center / cover no-repeat; /*centro la imagen, cubro toda el área, y si la pantalla se agranda, la imagen no se repite */;
+    grid-column: 2 / 2; /* column start / end */
+    grid-row: 2 / 2; /* row start / end */
+}
+
+.obra__titulo {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color_2);
+}
+
+/************************************************* Footer ******************************************************/
+footer {
+    text-align: center;
+    color: var(--color_2);
+    background-color: var(--color_3);
+    padding: 0.5rem;
+}
+
+.lista__contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
+}
+.lista__contacto li {
+    padding: 0.5rem;
+}
